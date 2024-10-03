@@ -8,10 +8,10 @@ body {
 
 .bg_img_holder{
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .background_image{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,6 +25,7 @@ body {
 .header {
     position: sticky;
     top: 0;
+    z-index: 1000;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,4 +91,69 @@ body {
     gap: 1.1em;
     align-items:center;
     background-color: white;
+}
+.About_Us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid whitesmoke;
+}
+.about_us_image img{
+    border-radius: 5%;
+}
+.about_us_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    font-size: 1.1em;
+    padding: 0em 1em;
+}
+.Our_Project {
+    display: flex;
+    flex-direction: row;
+    padding: 0em 1em;
+    background-color: white;
+}
+.projects_header {
+    padding: 1em 1em;
+    text-align: center;
+    font-size: 2em;
+}
+.project_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    font-size: 1.1em;
+    align-items: center;
+    border: 1px solid lightcoral;
+    padding: 1em 1em;
+}
+.project_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.project_text {
+    padding: 1em;
+}
+.Our_Team {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em;
+    background-color: rgba(255, 0, 0, 0.687);
+    gap: 1em;
+}
+.Member_Content img {
+    width: 270px;
+    height: 300px;
+}
+.Member_Content .title_name a {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.Member_Content img:hover + .title_name a{
+    opacity: 1;
 }
